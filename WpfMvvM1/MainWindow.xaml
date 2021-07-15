@@ -28,7 +28,7 @@
         <TextBox Grid.Column="1" Grid.Row="2" Margin="4" Text="{Binding LastName, UpdateSourceTrigger=PropertyChanged}" HorizontalAlignment="Left"  Width="200"/>
 
         <Label Grid.Column="0" Grid.Row="3" Margin="4" Content="Age:" HorizontalAlignment="Right"/>
-        <TextBlock Grid.Column="1" Grid.Row="3" Margin="4" Text="{Binding Age}" HorizontalAlignment="Left"/>
+        <TextBox  Grid.Column="1" Grid.Row="3" Margin="4" Text="{Binding Age, UpdateSourceTrigger=PropertyChanged}" HorizontalAlignment="Left" Width="100"/>
 
     </Grid>
 </Window>

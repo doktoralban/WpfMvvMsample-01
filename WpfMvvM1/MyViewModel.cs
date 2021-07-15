@@ -38,14 +38,23 @@ namespace WpfMvvM1
         }
 
          public int Age
-        {    get { return DateTime.Today.Year - user.BirthDate.Year; }
+        {    get { return   user.Age; }
+            set
+            {
+                user.Age = (short)value;
+                OnPropertyChange("LastName");
+                //.................................
+                OnPropertyChange("FullName"); 
+                //.................................
+                OnPropertyChange("Age");
+            }
         }
            
       
 
          public string FullName
         {
-            get { return FirstName + " " + LastName; }
+            get { return FirstName + " " + LastName + " ( " + Age.ToString() + " ) "; }
         }
 
         public MyViewModel()
@@ -54,7 +63,8 @@ namespace WpfMvvM1
             {
                 FirstName = " ",
                 LastName = " ",
-                BirthDate = DateTime.Now.AddYears(-30)
+                BirthDate = DateTime.Now.AddYears(-30),
+                Age=0
             };
         }
 

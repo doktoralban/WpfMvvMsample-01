@@ -8,6 +8,7 @@ namespace WpfMvvM1
 
         public string  LastName { get; set; }
 
+        public Int16 Age { get; set; }
         public DateTime BirthDate { get; set; }
 
     }
